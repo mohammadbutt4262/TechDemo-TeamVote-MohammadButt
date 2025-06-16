@@ -25,7 +25,7 @@ const SocketHandler = (req: NextApiRequest, res: NextApiResponseWithSocket) => {
   if (req.method === 'GET') {
     if (!res.socket.server.io) {
       console.log('Socket.IO server initializing...');
-      const httpServer: HTTPServer = res.socket.server as any;
+      const httpServer = res.socket.server;
       const io = new SocketIOServer(httpServer, {
         path: '/api/socket',
         addTrailingSlash: false,

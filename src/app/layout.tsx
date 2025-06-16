@@ -1,6 +1,13 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
   title: 'Tech Demo – TeamVote – Mohammad Butt',
@@ -14,12 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-body antialiased min-h-screen flex flex-col" suppressHydrationWarning={true}>
+      <body className={`${inter.className} font-body antialiased min-h-screen flex flex-col`} suppressHydrationWarning={true}>
         {children}
         <Toaster />
       </body>

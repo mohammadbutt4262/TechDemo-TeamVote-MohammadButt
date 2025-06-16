@@ -153,7 +153,7 @@ export default function IdeasPage() {
         <div className="flex flex-col sm:flex-row justify-between items-center mb-6 pb-4 border-b">
           <div>
             <h1 className="font-headline text-3xl md:text-4xl font-bold text-primary">Tech Demo – TeamVote – Mohammad Butt</h1>
-            <p className="text-muted-foreground text-md">Share and vote on your team's best ideas!</p>
+            <p className="text-muted-foreground text-md">Share and vote on your teams best ideas!</p>
           </div>
           {username && (
             <div className="flex items-center gap-3 mt-4 sm:mt-0">

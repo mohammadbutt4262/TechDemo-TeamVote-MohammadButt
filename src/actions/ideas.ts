@@ -5,7 +5,7 @@ import { db, type IdeaSchema, type VoteSchema } from '@/lib/db';
 import type { Idea, VoteType } from '@/types';
 import { getIoInstance, VOTE_UPDATE_EVENT } from '@/lib/get-io-instance';
 
-function logDetailedError(actionName: string, error: any) {
+function logDetailedError(actionName: string, error: unknown) {
   console.error(`Detailed error in ${actionName}:`, {
     message: error instanceof Error ? error.message : String(error),
     stack: error instanceof Error ? error.stack : undefined,
